@@ -18,3 +18,26 @@
     color: #aaa;
     font-style: italic;
 }
+
+.error,
+.success {
+    text-align: center;
+}
+
+.error {
+    border: 1px solid red;
+    background-color: #f9b5af;
+    color: red;
+}
+
+.error ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.success {
+    border: 1px solid green;
+    background-color: #d1f9da;
+    color: green;
+}
