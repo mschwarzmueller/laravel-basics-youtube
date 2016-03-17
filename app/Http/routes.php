@@ -39,22 +39,22 @@ Route::group(['middleware' => ['web']], function () {
     ]);
 
     Route::get('/logout', [
-       'uses' => 'UserController@getLogout',
+        'uses' => 'UserController@getLogout',
         'as' => 'logout'
     ]);
 
     Route::get('/account', [
-       'uses' => 'UserController@getAccount',
+        'uses' => 'UserController@getAccount',
         'as' => 'account'
     ]);
-    
+
     Route::post('/upateaccount', [
-       'uses' => 'UserController@postSaveAccount',
+        'uses' => 'UserController@postSaveAccount',
         'as' => 'account.save'
     ]);
 
     Route::get('/userimage/{filename}', [
-       'uses' => 'UserController@getUserImage',
+        'uses' => 'UserController@getUserImage',
         'as' => 'account.image'
     ]);
 
@@ -79,5 +79,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/edit', [
         'uses' => 'PostController@postEditPost',
         'as' => 'edit'
+    ]);
+
+    Route::post('/like', [
+       'uses' => 'PostController@postLikePost',
+        'as' => 'like'
     ]);
 });
